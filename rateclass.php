@@ -11,12 +11,13 @@ include("functions.php");
 		<!--margaret and fiona work on the inpuyt form-->
 	</div>
 	<div class = "TeacherRate">
-		<p>add your own rating <a href = "classform.php">here!</a></p>
+		<p>Add your own rating <a href = "classform.php">here!</a></p>
 		<h1>Overall Classes</h1>
 		<?php
 		$ratings = getClassRatings();
 		//print_r($ratings);
 		//class ratings as a whole
+		echo "<div class = 'ratingsbox'>";
 		foreach($ratings as $rating){
 			list($classid, $classname, $academyid, $credits, $ap, $honors, $classrating, $gradereq) = $rating;
 			if ($classrating != 0){
@@ -30,11 +31,12 @@ include("functions.php");
 				}
 			  if($gradereq = 1){
 					echo "<p>Graduation Requirement: ".$credits." credits</p>";
-				echo "<h2>Rating: ".$classrating."/10<h2>";
+				echo "<h2>Rating: ".$classrating."/5<h2>";
 				echo "</div>";
 				}
 			}	
 		}
 		?>
+	</div>
 	</div>
 </body>

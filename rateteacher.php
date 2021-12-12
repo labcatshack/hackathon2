@@ -12,11 +12,11 @@ include("functions.php");
 	</div>
 	<div class = "TeacherRate">
 		<h1>Overall Teachers</h1>
-		<p>add your own rating <a href = "teacherform.php">here!</a></p>
+		<p>Add your own rating <a href = "teacherform.php">here!</a></p>
 		<?php
 		$tratings = getTeacherRating();
-		//print_r($ratings);
-		//class ratings as a whole
+		print_r($ratings);
+		echo "<div class = 'ratingsbox'>";
 		foreach($tratings as $trating){
 			list($teacherid, $teacher, $rating, $academy, $tcategoryid) = $trating;
 			//echo $tcategoryid;
@@ -31,11 +31,12 @@ include("functions.php");
 					list($categoryid, $category) = getCategoryInfo($tcategoryid);
 					echo $category." teacher";
 				}
-		  echo "<h2>Rating: ". $rating."/10</h2>";
+		  echo "<h2>Rating: ". $rating."/5</h2>";
 			echo "</div>";
 			}
 		}
 		?>
+	</div>
 	</div>
 </body>
 </html>

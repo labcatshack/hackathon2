@@ -23,14 +23,9 @@ include('functions.php');
 	$url_components=parse_url($currenturl);
 	parse_str($url_components['query'], $params);
 	$formcategoryid = $params['CategoryID'];
-	$msg = $params['msg'];
-	//echo $formcategoryid;
-	if ($msg == 1){
-		echo "<p class = 'updatemsg'>your rating has been updated, select a category to rate again!</p>";
-	}else{
-		echo "<p class = 'updatemsg'>select a category to begin rating!</p>";
-	}
 	?>
+	<div class = 'overallform'>
+	<h1>Select a class category to begin rating!</h1>
 	 <form method="get" name = "LoginForm" action = "processdate.php?CategoryID=<?php echo $formcategoryid;?>">
 		<?php $categorys = getAllCategories();
 		 ?>
@@ -59,7 +54,7 @@ include('functions.php');
 				echo "<a href='processdate.php?teacherid=$teacherid&userid=$userid&rating=4'><i class='fas fa-apple-alt'></i></a>";
 				echo "<a href='processdate.php?teacherid=$teacherid&userid=$userid&rating=5'><i class='fas fa-apple-alt'></i></a>";
         echo "</td>"; ?>
-				<p>Current Class Rating:<?php echo $rating;?>/10</p>
+				<p>Current Class Rating:<?php echo $rating;?>/5</p>
 				<?php 
 				 if($academyid != 0){
 					 list($academyid, $academyname, $description) = getAcademyInfo($academyid);
@@ -71,5 +66,6 @@ include('functions.php');
 		 }?>
 		 </div>
 	</form>
+	</div>
 </body>
 </html>

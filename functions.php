@@ -255,6 +255,18 @@ if($avgresult->num_rows>0){
 return $avg;
 }
 
+function findAvgTeacher($teacherid){
+$avgsql = "SELECT AVG(TeacherRating) as AVG FROM TeacherRatings WHERE TeacherID = '".$teacherid."'";
+echo $avgsql;
+$avgresult = runQuery($avgsql);
+if($avgresult->num_rows>0){
+	while($row = $avgresult->fetch_array()){
+	 $avg = $row["AVG"];
+	}
+}
+return $avg;
+}
+
 function getTeachersCategory($categoryid){
 	$teachers = array();
 	$sql = "SELECT TeacherID, Teacher, TeacherRating, AcademyID, CategoryID FROM Teacher WHERE CategoryID = '".$categoryid."'";
@@ -271,5 +283,18 @@ function getTeachersCategory($categoryid){
 		}
 	}
  return $teachers;
+}
+
+function findCompletedIds($userid){
+	$ids = array();
+	$sql = "SELECT DISTINCT c.ClassID as ID FROM CompletedClasses c JOIN Classes l on l.ClassID = c.ClassID WHERE l.GradRequirement = '1' AND c.UserID = '".$userid."'";
+	$result = runQuery($sql);
+	if($result->num_rows>0){
+		while($row = $result->fetch_array()){
+			$classid = $row["ID"];
+			array_push($ids, array($classid));
+		}
+	}
+	return $ids;
 }
 ?>

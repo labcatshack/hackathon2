@@ -1,12 +1,28 @@
 <?php
-include('header.php');
-include('functions.php');
+session_start();
+//include('functions.php');
+//include('header.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Title</title>	
+	<title>Class Central</title>	
 </head>
+	<?php 
+	$gradids = array();
+	$ids = findCompletedIds($userid); 
+	//print_r($ids);
+	foreach($ids as $id){
+		list($classid) = $id;
+		list($classid, $classname, $academyid, $credits, $ap, $honors, $classrating, $gradereq) = getClassInfo($classid);
+		//echo $classname;
+		array_push($gradids, $credits);
+	}
+	$totalcredits = array_sum($gradids);
+	//echo $totalcredits;
+	$perecentprog = ($totalcredits/24)*100;
+	?>
+	<h2>Graduation Progress: <progress id = "gradprogress" value = "<?php echo $perecentprog;?>" max = "100"></progress></h2>
 <body>
 	<div id="whole">
 	<div id ="ttable">
@@ -97,16 +113,5 @@ include('functions.php');
 		</table>
 		</div>
 	</div>
-	<!--<h3><a href="https://wilsonhs.org/apps/pages/?uREC_ID=127891&type=d">Academic Athletic Acheivement</a></h3>
-	<h3><a href="https://wilsonhs.entest.org/apps/pages/?uREC_ID=127892&type=d">Academy of Finance</a></h3>
-	<h3><a href="https://wilsonhs.entest.org/apps/pages/index.jsp?uREC_ID=229320&type=d">Academy of Hospitality and Tourism</a></h3>
-	<h3><a href="https://wilsonhs.entest.org/apps/pages/?uREC_ID=127893&type=d">Creative Media Academy</a></h3>
-	<h3><a href="https://wilsonhs.entest.org/apps/pages/?uREC_ID=127894&type=d">JROTC Leadership Academy</a></h3>
-	<h3><a href="https://wilsonhs.entest.org/apps/pages/?uREC_ID=127896&type=d">WISP</a></h3>
-	<h3><a href="https://www.wilsonhs.org/apps/pages/?uREC_ID=127895&type=d">SciMaTech</a></h3>
-	<h4><a href="https://www.wilsonhs.org/ourpages/auto/2021/10/29/40031331/Academy%20of%20Engineering.pdf?rnd=1636494080446">Engineering</a></h4>
-	<h4><a href="https://www.wilsonhs.org/ourpages/auto/2021/10/29/40031331/Academy%20of%20Health%20Science.pdf?rnd=1636494080446">Academy of Health Sciences</a></h4>
-	<h4><a href="https://www.wilsonhs.org/ourpages/auto/2021/10/29/40031331/Academy%20of%20Environmental%20Science%20_1_.pdf?rnd=1636494080446">Academy of Environmental Science</a></h4>
-	<h4>	<a href="https://www.wilsonhs.org/ourpages/auto/2021/10/29/40031331/Academy%20of%20Information%20Technology.pdf?rnd=1636494080446">Academy of Information Technology</a></h4>-->
 </body>
 </html>

@@ -27,7 +27,7 @@
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" name = "LoginForm" onsubmit = "return validateForm()">
         <p class="inputp">Username: <input type="text" name="Username" class="inputbutton" value = "<?php echo htmlspecialchars($username);?>" required></p>
         <p class="inputp">Password: <input type="password" name="Password" class="inputbutton" value = "<?php echo htmlspecialchars($password);?>" required></p>
-        <br><input type="submit" value="Login" class="submitbutton">
+        <br><input type="submit" value="Login" class="formloginbtn">
       </form>
           <tr><td class = "errclass"><?php echo $err_msg;?></td></tr>
 			<div id = "createlink">
