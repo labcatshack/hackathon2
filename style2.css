@@ -1,0 +1,45 @@
+#nav ul{
+	list-style-type: none;
+	padding-top: .75%;
+	font-family: "poiret one";
+}
+
+#nav li{
+  display: inline-block;
+	width: 16.5%;
+	background-color: #c71e12;
+	color: black;
+	font-size: 18px;
+	padding: .8%;
+	margin-right: 1.5%;
+	text-align: center;
+}
+#newuserform{
+	background-color: #0884c7;
+	font-family: "poiret one";
+	padding: 2%;
+	padding-top: 1%;
+	width: 24%;
+	margin: 2%;
+}
+#submitbutton{
+	background-color: #12c71e;
+}
+#loginform{
+	background-color: #0884c7;
+	font-family: "poiret one";
+	padding: 2%;
+	padding-top: 1%;
+	width: 28%;
+	margin: 2%;
+}
+#createlink{
+	color: #12c71e;
+	text-decoration: none;
+}
+#nav a {
+	color: #000000;
+	margin: 1.5%;
+	text-decoration: none;
+}
+#nav a:hover {color: #0884c7;}

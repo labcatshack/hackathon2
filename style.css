@@ -1,0 +1,252 @@
+
+.announcements{
+	background-color:#0884c7;
+	font-family: "poiret one"; 
+	border-style: solid; 
+	padding: 20px;
+	margin: 20px; 
+	width: 600px;
+	
+}
+body{
+	/*background-color: #dcd8f0;*/
+	background-color: #f6facf;
+	font-family: "poiret one";
+}
+.box{
+	font-family: "poiret one";
+	width: 600px;
+	lenght: 800px;
+	diplay: flex; 
+	flex-direction: column;
+	border-style: solid;
+	padding: 20px; 
+	margin: 20px; 
+	background-color: #12c71e;
+}
+/*.e{
+	display: flex;
+	flex-direction:row;
+}*/
+.footer{
+	
+}
+#whole {
+	display: flex;
+}
+
+.transcript td, th{
+	border-style: solid; 
+	border-width: 1px; 
+	padding:15px; 
+}
+
+.atable td{
+	 padding:15px; 
+}
+
+.al {
+	text-decoration: none;
+	background-color: #8dd698;
+	border-radius: 10px;
+	border: 2px inset #8dd698;
+	padding: 10px;
+	text-align: center;
+}
+
+.al:hover, .bl:hover {
+	background-color: #f6fcc0;
+}
+
+.bl {
+	text-decoration: none;
+	background-color: #89b9e0;
+	border-radius: 10px;
+	border: 2px inset #89b9e0;
+	padding: 10px;
+	text-align: center;
+}
+
+.rating{
+	background-color: white;
+	border: 2px black solid;
+	border-radius: 5px;
+	box-shadow: 5px 10px black;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 6%;
+	padding-bottom: 2%;
+}
+
+
+.dropbtn {
+  background-color: #c71e12;
+  color: black;
+  font-size: 16px;
+	font-family: "poiret one";
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #c71e12;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #c71e12;
+}
+	
+.classrating{
+    background-color: white;
+    margin: 2%;
+    padding: 3%;
+    border-radius: 5px;
+    width: 20%;
+    border: 2px solid black;
+}
+	
+.classratingbox{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+-
+.announcements{
+	background-color:#0884c7;
+	font-family: "poiret one"; 
+	border-style: solid; 
+	padding: 20px;
+	margin: 20px; 
+	width: 600px;
+	
+}
+body{
+	/*background-color: #dcd8f0;*/
+	background-color: #f6facf;
+	font-family: "poiret one";
+}
+.box{
+	font-family: "poiret one";
+	width: 600px;
+	lenght: 800px;
+	diplay: flex; 
+	flex-direction: column;
+	border-style: solid;
+	padding: 20px; 
+	margin: 20px; 
+	background-color: #12c71e;
+}
+/*.e{
+	display: flex;
+	flex-direction:row;
+}*/
+.footer{
+	
+}
+#whole table, th, td{
+	border-style: solid; 
+	border-width: 1px; 
+	padding:15px; 
+}
+/*.transcript table, th, td{
+	border-style: solid; 
+	border-width: 1px; 
+	padding:15px; 
+}*/
+
+.rating{
+	background-color: white;
+	border: 2px black solid;
+	border-radius: 5px;
+	box-shadow: 5px 10px black;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 6%;
+	padding-bottom: 2%;
+}
+
+
+.dropbtn {
+  background-color: #c71e12;
+  color: black;
+  font-size: 16px;
+	font-family: "poiret one";
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #c71e12;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #c71e12;
+}
+	
+.classrating{
+    background-color: white;
+    margin: 2%;
+    padding: 3%;
+    border-radius: 5px;
+    width: 20%;
+    border: 2px solid black;
+}
+	
+.classratingbox{
+	display: flex;
+	flex-wrap: wrap;
+}
+	
+i.far, i.fas{color:#4578a8;}
+i.grayfas{color:#99CEFF;}
+i.far:hover, i.fas:hover{color:pink;}
